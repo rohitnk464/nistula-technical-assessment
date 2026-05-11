@@ -1,0 +1,91 @@
+{
+  "info": {
+    "_postman_id": "c1f7a18b-59b1-4f1e-9f44-8848f68d904b",
+    "name": "Nistula Messaging Platform",
+    "description": "API collection for Nistula AI-Powered Unified Guest Messaging Platform.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Incoming Webhook Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{webhook_secret}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"source\": \"whatsapp\",\n  \"guest_name\": \"Rahul Sharma\",\n  \"message\": \"Is the villa available from April 20 to 24?\",\n  \"timestamp\": \"2026-05-05T10:30:00Z\",\n  \"booking_ref\": \"NIS-2024-0891\",\n  \"property_id\": \"villa-b1\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/webhook/message",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "webhook",
+            "message"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "webhook_secret",
+      "value": "super_secret_key_123",
+      "type": "string"
+    }
+  ]
+}

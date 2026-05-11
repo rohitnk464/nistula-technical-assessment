@@ -1,5 +1,7 @@
 # Nistula AI-Powered Unified Guest Messaging Platform
 
+🚀 **Live API Deployment:** `https://nistula-technical-assessment-jro6.onrender.com`
+
 This repository contains the backend assessment for the Nistula Summer Technology Internship 2026. It implements a centralized messaging backend that ingests guest messages from multiple channels, classifies intent, generates AI-assisted responses using Anthropic's Claude API, and implements a confidence-based routing system.
 
 ## Architecture Overview
@@ -58,7 +60,7 @@ The system follows a modular Express.js architecture:
    npm start
    \`\`\`
    In development, the server will start on `http://localhost:5000`. 
-   In production, the API will be available at your deployed domain (e.g., `https://api.yourdomain.com`).
+   In production, the API will be available at your deployed domain (e.g., `https://nistula-technical-assessment-jro6.onrender.com`).
 
 ## API Endpoint Usage
 

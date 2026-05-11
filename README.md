@@ -57,7 +57,8 @@ The system follows a modular Express.js architecture:
    # Production mode
    npm start
    \`\`\`
-   The server will start on `http://localhost:5000`.
+   In development, the server will start on `http://localhost:5000`. 
+   In production, the API will be available at your deployed domain (e.g., `https://api.yourdomain.com`).
 
 ## API Endpoint Usage
 
